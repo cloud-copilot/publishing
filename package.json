@@ -6,6 +6,11 @@
   "author": "",
   "type": "module",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,32 +35,24 @@
         "@semantic-release/commit-analyzer",
         {
           "releaseRules": [
-            {
-              "type": "feat",
-              "release": "patch"
-            },
-            {
-              "type": "fix",
-              "release": "patch"
-            },
-            {
-              "breaking": true,
-              "release": "patch"
-            },
-            {
-              "type": "*",
-              "release": "patch"
-            }
+            { "type": "feat", "release": "patch" },
+            { "type": "fix", "release": "patch" },
+            { "breaking": true, "release": "patch" },
+            { "type": "*", "release": "patch" }
           ]
         }
       ],
-      "@semantic-release/release-notes-generator",
+      "@semantic-release/release-notes-generator"
+    ],
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/github"
+    ],
+    "prepare": [
       "@semantic-release/changelog",
       [
         "@semantic-release/npm",
-        {
-          "npmPublish": true
-        }
+        { "npmPublish": true }
       ],
       [
         "@semantic-release/git",
@@ -67,12 +64,13 @@
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]"
         }
-      ],
+      ]
+    ],
+    "publish": [
+      "@semantic-release/github",
       [
-        "@semantic-release/github",
-        {
-          "assets": []
-        }
+        "@semantic-release/npm",
+        { "npmPublish": true }
       ]
     ]
   }
