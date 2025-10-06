@@ -1,6 +1,6 @@
 {
   "name": "@cloud-copilot/publishing",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "A Github NPM Trusted Publishing Test",
   "license": "MIT",
   "author": "",
@@ -17,7 +17,7 @@
   "files": [
     "src/**/*"
   ],
-   "devDependencies": {
+  "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
@@ -35,10 +35,22 @@
         "@semantic-release/commit-analyzer",
         {
           "releaseRules": [
-            { "type": "feat", "release": "patch" },
-            { "type": "fix", "release": "patch" },
-            { "breaking": true, "release": "patch" },
-            { "type": "*", "release": "patch" }
+            {
+              "type": "feat",
+              "release": "patch"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "breaking": true,
+              "release": "patch"
+            },
+            {
+              "type": "*",
+              "release": "patch"
+            }
           ]
         }
       ],
@@ -52,7 +64,9 @@
       "@semantic-release/changelog",
       [
         "@semantic-release/npm",
-        { "npmPublish": false }
+        {
+          "npmPublish": false
+        }
       ],
       [
         "@semantic-release/git",
