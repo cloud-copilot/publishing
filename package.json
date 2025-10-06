@@ -1,0 +1,79 @@
+{
+  "name": "@cloud-copilot/publishing",
+  "version": "0.0.1",
+  "description": "A Github NPM Trusted Publishing Test",
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "src/**/*"
+  ],
+   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "semantic-release": "^24.2.1"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "releaseRules": [
+            {
+              "type": "feat",
+              "release": "patch"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "breaking": true,
+              "release": "patch"
+            },
+            {
+              "type": "*",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": true
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "package-lock.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": []
+        }
+      ]
+    ]
+  }
+}
