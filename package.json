@@ -52,7 +52,7 @@
       "@semantic-release/changelog",
       [
         "@semantic-release/npm",
-        { "npmPublish": true }
+        { "npmPublish": false }
       ],
       [
         "@semantic-release/git",
@@ -67,11 +67,7 @@
       ]
     ],
     "publish": [
-      "@semantic-release/github",
-      [
-        "@semantic-release/npm",
-        { "npmPublish": true }
-      ]
+      "@semantic-release/github"
     ]
   }
 }
