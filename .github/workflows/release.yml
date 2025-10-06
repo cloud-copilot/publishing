@@ -27,5 +27,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install -g npm@latest
+          npm -v
           npm ci
           npx semantic-release
