@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/cloud-copilot/publishing/compare/v1.0.3...v1.0.4) (2025-10-06)
+
+
+### Features
+
+* Hello 7 ([2110579](https://github.com/cloud-copilot/publishing/commit/2110579e6e4a3bcdee4977a86e56b4efd1d5ed6f))
+
 ## [1.0.3](https://github.com/cloud-copilot/publishing/compare/v1.0.2...v1.0.3) (2025-10-06)
 
 
