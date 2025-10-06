@@ -1,12 +1,11 @@
 {
   "name": "@cloud-copilot/publishing",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A Github NPM Trusted Publishing Test",
   "license": "MIT",
   "author": "",
   "type": "module",
   "main": "index.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
