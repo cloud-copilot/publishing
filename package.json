@@ -1,6 +1,6 @@
 {
   "name": "@cloud-copilot/publishing",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Github NPM Trusted Publishing Test",
   "license": "MIT",
   "author": "",
