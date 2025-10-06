@@ -31,5 +31,6 @@ jobs:
           npm install -g npm@latest
           npm ci
           npx semantic-release
+          npm publish
 
 
