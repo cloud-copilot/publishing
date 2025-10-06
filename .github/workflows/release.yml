@@ -31,4 +31,5 @@ jobs:
           echo "npm version"
           npm -v
           npm ci
-          npx semantic-release
+          npm publish
+          # npx semantic-release
