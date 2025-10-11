@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: write
       issues: write
+      pull-requests: write
       id-token: write  # Required for OIDC
     steps:
       - name: Check out
@@ -28,9 +29,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          START_VERSION=$(jq -r '.version' package.json)
           npm install -g npm@latest
           npm ci
           npx semantic-release
-          npm publish
+          AFTER_VERSION=$(jq -r '.version' package.json)
+          [ "$START_VERSION" != "$AFTER_VERSION" ] && npm publish || true
+
 
 
