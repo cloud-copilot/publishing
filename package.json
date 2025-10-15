@@ -75,7 +75,7 @@
             "package.json",
             "package-lock.json",
             "CHANGELOG.md",
-            "src/version.js"
+            "version.js"
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]"
         }
