@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/cloud-copilot/publishing/compare/v1.0.12...v1.0.13) (2025-10-16)
+
+
+### Features
+
+* 18 ([a1f1704](https://github.com/cloud-copilot/publishing/commit/a1f17049f2f354cfa0889adc42eecfb7448a815b))
+
 ## [1.0.12](https://github.com/cloud-copilot/publishing/compare/v1.0.11...v1.0.12) (2025-10-16)
 
 
